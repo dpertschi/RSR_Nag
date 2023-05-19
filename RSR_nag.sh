@@ -1,11 +1,10 @@
 #!/bin/zsh
 
-#  
-#  nudge like script using dialog to prompt for an OS upgrade
+#  CREDIT
 #  https://github.com/bartreardon/swiftDialog-scripts/blob/main/Update%20Notifications/updatePrompt.sh
 #  Created by Bart Reardon on 15/9/21.
 #
-#  5-17-23 Modified to nag for RSR install
+#  Modified to nag uer to install pending Rapid Security Update
 #
 
 dialogApp="/usr/local/bin/dialog"
@@ -44,7 +43,7 @@ has been released, and is now required.
 This is a **small** update, please install at your earliest convenience."
 infotext="More Information"
 
-icon="/Library/Application Support/VF Corp/VF_Icon_white_center.png"
+icon="/Library/Application Support/Corp/Icon_white_center.png"
 
 overlay="/System/Library/CoreServices/Rosetta 2 Updater.app/Contents/Resources/AppIcon.icns"
 button1text="Open Software Update"
@@ -66,7 +65,7 @@ runDialog () {
             --infobuttontext "${infotext}" \
             --infobuttonaction "${infolink}" \
             --button1text "${button1text}" \
-            --bannerimage "/Users/PERTSCD/Library/CloudStorage/OneDrive-VFCCorp/Tools/swiftDialog/Projects/sec.jpg" \
+            --bannerimage "/Tools/swiftDialog/Projects/sec.jpg" \
 #            --bannertitle "Rapid Security Response"
     
     processExitCode $?
