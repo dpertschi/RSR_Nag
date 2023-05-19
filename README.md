@@ -3,7 +3,7 @@ This script borrows **heavily** from Bart Reardon's [updatePrompt](https://githu
 
 In this adaption we're reading the RSR 'version' installed (`-ProductVersionExtra`) and then specifying a required RSR version value via a Jamf Pro variable.
 
-If the existing version anbd required version dont match we're simply sending the user to the Software Update preference pane.
+If the existing version and required version dont match we're simply sending the user to the Software Update preference pane.
 
 The `persistant` variable will force the dialog to remain until the update is installed, the subsequent reboot effectively kills the dialog process.
 
